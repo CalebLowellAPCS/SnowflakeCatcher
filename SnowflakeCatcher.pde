@@ -22,6 +22,8 @@ class Snowflake
     x = (int)(Math.random()*512);
     y = (int)(Math.random()*512);
     isMoving = true;
+
+    
     //class member variable initializations
   }
   void show()
