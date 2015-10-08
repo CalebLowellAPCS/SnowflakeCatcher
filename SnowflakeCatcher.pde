@@ -1,10 +1,32 @@
+Snowflake [] alpaca;
+
 void setup()
 {
   size(512, 512);
+
+  alpaca = new Snowflake [37];
+
+  for(int i = 0; i < alpaca.length; i++){
+
+      alpaca[i] = new Snowflake();
+
+  }
   //your code here
 }
 void draw()
 {
+
+  background(0, 0, 0);
+
+  for(int i = 0; i < alpaca.length; i++){
+
+      alpaca[i].erase();
+      alpaca[i].lookDown();
+      alpaca[i].move();
+      alpaca[i].wrap();
+      alpaca[i].show();
+
+  }
   //your code here
 }
 void mouseDragged()
@@ -15,7 +37,7 @@ void mouseDragged()
 class Snowflake
 {
   int x, y;
-  boolean inMoving;
+  boolean isMoving;
     //class member variable declarations
   Snowflake()
   {
@@ -23,7 +45,6 @@ class Snowflake
     y = (int)(Math.random()*512);
     isMoving = true;
 
-    
     //class member variable initializations
   }
   void show()
@@ -38,7 +59,7 @@ class Snowflake
       isMoving = false;
     }
     else {
-      inMoving = true;
+      isMoving = true;
     }
     //your code here
   }
@@ -58,7 +79,7 @@ class Snowflake
   }
   void wrap()
   {
-    if(y > 512){
+    if(y > 500){
       y = 0;
       x = (int)(Math.random()*512);
     }
