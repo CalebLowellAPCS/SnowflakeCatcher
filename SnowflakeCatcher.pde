@@ -31,6 +31,9 @@ void draw()
 }
 void mouseDragged()
 {
+  fill(192, 192, 192);
+  ellipse(mouseX, mouseY, 20, 20);
+
   //your code here
 }
 
