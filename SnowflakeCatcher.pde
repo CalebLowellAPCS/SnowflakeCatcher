@@ -4,7 +4,9 @@ void setup()
 {
   size(512, 512);
 
-  alpaca = new Snowflake [37];
+  background(0, 0, 0);
+
+  alpaca = new Snowflake [100];
 
   for(int i = 0; i < alpaca.length; i++){
 
@@ -16,7 +18,6 @@ void setup()
 void draw()
 {
 
-  background(0, 0, 0);
 
   for(int i = 0; i < alpaca.length; i++){
 
@@ -31,8 +32,9 @@ void draw()
 }
 void mouseDragged()
 {
-  fill(192, 192, 192);
+  fill(1, 1, 1);
   ellipse(mouseX, mouseY, 20, 20);
+  fill(0, 0, 0);
 
   //your code here
 }
@@ -58,7 +60,7 @@ class Snowflake
   }
   void lookDown()
   {
-    if(y >= 0 && y <= 512 && (get(x, y + 4) != color(0, 0, 0))){
+    if((y >= 0 && y <= 512) && (get(x, y + 4) != color(0, 0, 0))){
       isMoving = false;
     }
     else {
