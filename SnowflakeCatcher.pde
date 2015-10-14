@@ -32,9 +32,18 @@ void draw()
 }
 void mouseDragged()
 {
+  if(mouseButton == LEFT){
+
   fill(1, 1, 1);
   ellipse(mouseX, mouseY, 20, 20);
   fill(0, 0, 0);
+
+  }
+  else {
+
+    fill(0, 0, 0);
+    ellipse(mouseX, mouseY, 7, 7);
+  }
 
   //your code here
 }
