@@ -42,7 +42,7 @@ void mouseDragged()
   else {
 
     fill(0, 0, 0);
-    ellipse(mouseX, mouseY, 7, 7);
+    ellipse(mouseX, mouseY, 50, 50);
   }
 
   //your code here
